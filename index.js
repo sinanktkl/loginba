@@ -21,10 +21,11 @@ mongoose
     app.listen(process.env.PORT, () =>
       console.log(`🚀 Server running on port ${process.env.PORT}`)
     );
+    app.get('/',(req,res)=>{
+      res.send(`appserver Running Successfully in ${process.env.PORT}`)
+  })
   })
   .catch((err) => console.error("DB Connection Error:", err));
 
- app.get('/',(req,res)=>{
-    res.send(`appserver Running Successfully in ${PORT}`)
-})
+ 
  
