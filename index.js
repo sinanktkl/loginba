@@ -23,4 +23,8 @@ mongoose
     );
   })
   .catch((err) => console.error("DB Connection Error:", err));
+
+ app.get('/',(req,res)=>{
+    res.send(`appserver Running Successfully in ${PORT}`)
+})
  
